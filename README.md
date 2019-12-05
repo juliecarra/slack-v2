@@ -1,5 +1,8 @@
 <h1>slack-v2</h1>
-<img src="../v2.png" alt="" />
+<blockquote>
+App available here https://slack-v2.firebaseapp.com/
+</blockquote>
+<img src="slack-v2.png" alt="" />
 <p>This is a fullstack app made with React, Redux, Firebase and styled with Semantic UI & Sass.</p>
 <h2>Features</h2>
 <ul>
