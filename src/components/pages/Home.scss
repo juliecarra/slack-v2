@@ -1,0 +1,64 @@
+$display: flex;
+$align-items: center;
+$primary-color: #fff;
+
+.navbar {
+  display: $display;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: $align-items;
+
+  a {
+    color: $primary-color;
+    font-size: 16px;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
+.icons {
+  position: absolute;
+  border-radius: 50%;
+}
+
+@for $i from 1 through 19 {
+  @keyframes icon-animation-#{$i} {
+    100% {
+      transform: translate3d(
+        (random(90) * 1vw),
+        (random(90) * 1vh),
+        (random(100) * 1px)
+      );
+    }
+  }
+
+  .icons:nth-child(#{$i}) {
+    animation: icon-animation-#{$i} 60s infinite;
+    $size: random(5) + 5 + px;
+    height: $size;
+    width: $size;
+    animation-delay: -$i * 0.1s;
+
+    transform: translate3d(
+      (random(90) * 1vw),
+      (random(90) * 1vh),
+      (random(100) * 1px)
+    );
+  }
+}
+
+.landing {
+  display: $display;
+  flex-direction: column;
+  align-items: $align-items;
+  font-size: 20px;
+  margin-top: 150px;
+
+  .heading {
+    font-size: 2em;
+  }
+  .paragraph {
+    font-size: 1em;
+  }
+}

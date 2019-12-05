@@ -1,0 +1,142 @@
+.messages {
+  height: 440px;
+  overflow-y: scroll;
+
+  .message {
+    &__self {
+      border-left: 2px solid #3f0f3f;
+      padding-left: 8px;
+    }
+    &__image {
+      padding: 1em;
+    }
+  }
+  .progress__bar {
+    margin: 0.3em 0 0 0 !important;
+  }
+}
+
+// messages__form {
+//   position: fixed !important;
+//   bottom: 1em;
+//   margin-left: 320px !important;
+//   left: 0;
+//   right: 1em;
+//   z-index: 200;
+// }
+
+/* Typing.js */
+.user__typing {
+  font-style: italic;
+  font-weight: bold;
+  margin-right: 3px;
+  color: grey;
+
+  .typing {
+    width: 5em;
+    height: 2em;
+    position: relative;
+    padding: 10px;
+    margin-left: 5px;
+
+    &__dot {
+      float: left;
+      width: 8px;
+      height: 8px;
+      margin: 0 4px;
+      background: #8d8c91;
+      border-radius: 50%;
+      opacity: 0;
+      animation: loadingFade 1s infinite;
+
+      &:nth-child(1) {
+        animation-delay: 0s;
+      }
+      &:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      &:nth-child(3) {
+        animation-delay: 0.4s;
+      }
+    }
+  }
+}
+
+@keyframes loadingFade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+//Emoji
+.emojipicker {
+  position: absolute;
+}
+
+//Skeleton
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  height: 40px;
+  margin-bottom: 10px;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    animation: sweep 2s infinite;
+    background-image: linear-gradient(
+      to left,
+      transparent,
+      rgba(255, 255, 255, 0.4),
+      transparent
+    );
+  }
+  &__avatar {
+    height: 35px;
+    width: 35px;
+    border-radius: 3px;
+    background-color: rgba(58, 57, 57, 0.3);
+  }
+
+  &__author {
+    background-color: rgba(58, 57, 57, 0.3);
+    width: 120px;
+    height: 10px;
+    border-radius: 3px;
+    position: absolute;
+    bottom: 30px;
+    left: 40px;
+    right: 0;
+  }
+
+  &__details {
+    background-color: rgba(58, 57, 57, 0.3);
+    height: 20px;
+    border-radius: 3px;
+    position: absolute;
+    bottom: 5px;
+    left: 40px;
+    right: 20px;
+  }
+  @keyframes sweep {
+    0% {
+      transform: translateX(-100%);
+    }
+    50% {
+      transform: translateX(150%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+}

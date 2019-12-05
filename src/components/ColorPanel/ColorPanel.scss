@@ -1,0 +1,15 @@
+$size: 35px;
+
+.color__container {
+  cursor: pointer;
+  position: relative;
+  border-radius: 3px;
+  overflow: hidden;
+  width: $size;
+  height: $size;
+
+  .color__square {
+    width: $size;
+    height: $size;
+  }
+}

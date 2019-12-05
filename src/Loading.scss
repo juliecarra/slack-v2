@@ -1,0 +1,149 @@
+.wp {
+  position: relative;
+  width: 75px;
+  height: 75px;
+  transform: rotate(-16deg);
+}
+.rot {
+  position: relative;
+  left: 10px;
+  top: 10px;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 50px;
+    height: 10px;
+    border-radius: 10px;
+
+    background: #6dcadc;
+    opacity: 0.8;
+    animation: blue 2s infinite;
+  }
+  &::after {
+    content: " ";
+    position: absolute;
+    top: 20px;
+    left: 0px;
+
+    width: 50px;
+    height: 10px;
+    border-radius: 10px;
+
+    background: #e01463;
+    opacity: 0.8;
+    animation: purp 2s infinite;
+  }
+}
+
+@keyframes blue {
+  0% {
+    transform: translate(0, 0);
+    width: 10px;
+  }
+  35% {
+    width: 50px;
+    transform: translate(0, 0);
+  }
+  65% {
+    transform: translate(40px, 0);
+    width: 10px;
+  }
+  100% {
+    transform: translate(0, 0);
+    width: 10px;
+  }
+}
+@keyframes purp {
+  0% {
+    transform: translate(40px, 0);
+    width: 10px;
+  }
+  35% {
+    width: 50px;
+    transform: translate(0, 0);
+  }
+  65% {
+    transform: translate(0px, 0);
+    width: 10px;
+  }
+  100% {
+    transform: translate(40px, 0);
+    width: 10px;
+  }
+}
+
+.tor {
+  position: relative;
+  left: 20px;
+  top: 2px;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 10px;
+    height: 50px;
+    border-radius: 10px;
+
+    background: #3db991;
+    opacity: 0.8;
+    animation: green 2s infinite;
+  }
+  &::after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 20px;
+
+    width: 10px;
+    height: 50px;
+    border-radius: 10px;
+
+    background: #e9a81f;
+    opacity: 0.8;
+    animation: yellow 2s infinite;
+  }
+}
+
+@keyframes green {
+  0% {
+    transform: translate(0, 40px);
+    height: 10px;
+  }
+  35% {
+    height: 50px;
+    transform: translate(0, 0);
+  }
+  65% {
+    transform: translate(0, 0);
+    height: 10px;
+  }
+  100% {
+    transform: translate(0, 40px);
+    height: 10px;
+  }
+}
+@keyframes yellow {
+  0% {
+    transform: translate(0, 0);
+    height: 10px;
+  }
+  35% {
+    height: 50px;
+    transform: translate(0, 0);
+  }
+  65% {
+    transform: translate(0, 40px);
+    height: 10px;
+  }
+  100% {
+    transform: translate(0, 0);
+    height: 10px;
+  }
+}
