@@ -6,7 +6,7 @@
     "emoji-mart": "^2.11.1",
     "firebase": "^7.5.0",
     "md5": "^2.2.1",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "node-sass": "^4.13.0",
     "react": "^16.12.0",
     "react-avatar-editor": "^12.0.0-beta.0",
